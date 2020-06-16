@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :taggings
       resources :diets
       resources :meals
+      resources :diet_meals
     end
   end  
 end

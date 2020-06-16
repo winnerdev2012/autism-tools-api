@@ -41,3 +41,23 @@ Meal.create(name: 'Dinner', description: 'Noodles, veggies and salad')
 Meal.create(name: 'Snack1', description: 'Crackers')
 Meal.create(name: 'Snack2', description: 'Rice cakes')
 Meal.create(name: 'Snack3', description: 'Pistachios nuts')
+
+DietMeal.create(diet_id: 1, meal_id: 1)
+DietMeal.create(diet_id: 1, meal_id: 2)
+DietMeal.create(diet_id: 1, meal_id: 3)
+DietMeal.create(diet_id: 1, meal_id: 4)
+
+DietMeal.create(diet_id: 2, meal_id: 1)
+DietMeal.create(diet_id: 2, meal_id: 2)
+DietMeal.create(diet_id: 2, meal_id: 3)
+DietMeal.create(diet_id: 2, meal_id: 4)
+
+DietMeal.create(diet_id: 3, meal_id: 1)
+DietMeal.create(diet_id: 3, meal_id: 2)
+DietMeal.create(diet_id: 3, meal_id: 3)
+DietMeal.create(diet_id: 3, meal_id: 4)
+
+DietMeal.create(diet_id: 4, meal_id: 1)
+DietMeal.create(diet_id: 4, meal_id: 2)
+DietMeal.create(diet_id: 4, meal_id: 3)
+DietMeal.create(diet_id: 4, meal_id: 4)
