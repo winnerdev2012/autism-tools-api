@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :resources
       resources :boards
       resources :board_resources
+      resources :tags
     end
   end  
 end
