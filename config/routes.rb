@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :tags
       resources :taggings
       resources :diets
+      resources :meals
     end
   end  
 end
