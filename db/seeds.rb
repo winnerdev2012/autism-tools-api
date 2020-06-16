@@ -29,3 +29,8 @@ Tagging.create(tag_id: 2, resource_id: 1)
 # Tagging.create(tag_id: 1, schedule_id: 1)
 # Tagging.create(tag_id: 1, treatment_id: 1)
 # Tagging.create(tag_id: 1, user_id: 1)
+
+Diet.create(name: 'Vegan', description: 'Only plants.', instructions: 'No living thing, no product of a living, moving thing, or egg of a moving, living thing.' )
+Diet.create(name: 'Pescatarian', description: 'Veggies, eggs, dairy and seafood', instructions: 'Largely plant-based diet of whole grains, nuts, legumes, produce and healthy fats, with seafood playing a key role as a main protein source. Many pescatarians also eat dairy and eggs' )
+Diet.create(name: 'Vegetarian', description: 'Veggies, eggs, dairy, no meats or fish.', instructions: 'Plants, no moving,living thing, eggs of a moving, living thing ok.' )
+Diet.create(name: 'American', description: 'Anything, including fast foods.', instructions: 'If you crave it, you eat it.')
