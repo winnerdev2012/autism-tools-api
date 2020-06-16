@@ -12,3 +12,8 @@ BoardResource.create(board_id: 1, resource_id: 1)
 BoardResource.create(board_id: 2, resource_id: 2)
 BoardResource.create(board_id: 3, resource_id: 3)
 BoardResource.create(board_id: 4, resource_id: 4)
+
+Tag.create(name: 'comfort')
+Tag.create(name: 'favorite')
+Tag.create(name: 'exercise')
+Tag.create(name: 'food')
