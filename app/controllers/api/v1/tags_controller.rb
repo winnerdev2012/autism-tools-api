@@ -32,7 +32,7 @@ class Api::V1::TagsController < ApplicationController
   
   private
   def tag_params
-    params.require(:tag).permit(:name, :description)
+    params.require(:tag).permit(:name)
   end
   
   def set_tag

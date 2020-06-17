@@ -32,7 +32,7 @@ class Api::V1::DietMealsController < ApplicationController
   
   private
   def diet_meal_params
-    params.require(:diet_meal).permit(:name, :description)
+    params.require(:diet_meal).permit(:diet_id, :meal_id)
   end
   
   def set_diet_meal
