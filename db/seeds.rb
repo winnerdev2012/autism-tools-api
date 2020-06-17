@@ -62,3 +62,8 @@ DietMeal.create(diet_id: 4, meal_id: 1)
 DietMeal.create(diet_id: 4, meal_id: 2)
 DietMeal.create(diet_id: 4, meal_id: 3)
 DietMeal.create(diet_id: 4, meal_id: 4)
+
+Recipe.create(name: 'Burger', description: 'Big burger', instructions: 'Buns, patty, lettuce, tomato, condiments')
+Recipe.create(name: 'Pea Soup', description: 'Pea Soup', instructions: 'Soup stock, veggies, peas')
+Recipe.create(name: 'Lentil Soup', description: 'Lentil Soup', instructions: 'Soup stock, veggies, lentils')
+Recipe.create(name: 'Fried Rice', description: 'Fried Rice', instructions: 'Rice, egg, chop veggies, oil, sesame, soy sauce')
