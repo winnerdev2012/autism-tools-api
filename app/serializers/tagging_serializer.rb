@@ -1,3 +1,3 @@
 class TaggingSerializer < ActiveModel::Serializer
-  attributes :id, :board, :resource, :diet, :meal, :recipe, :document, :medication, :playlist, :schedule, :treatment, :user
+  attributes :id, :board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :medication_id, :playlist_id, :schedule_id, :treatment_id
 end

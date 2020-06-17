@@ -32,7 +32,7 @@ class Api::V1::ResourcesController < ApplicationController
 
   private
     def resource_params
-      params.require(:resource).permit(:name, :description)
+      params.require(:resource).permit(:name, :description, :format, :location)
     end
 
     def set_resource

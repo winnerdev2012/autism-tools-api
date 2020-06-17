@@ -32,7 +32,7 @@ class Api::V1::DietsController < ApplicationController
 
   private
   def diet_params
-    params.require(:diet).permit(:name, :description)
+    params.require(:diet).permit(:name, :description, :instructions)
   end
 
   def set_diet
