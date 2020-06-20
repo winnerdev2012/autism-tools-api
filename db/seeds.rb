@@ -24,9 +24,11 @@ Tagging.create(tag_id: 2, resource_id: 1)
 Tagging.create(tag_id: 3, diet_id: 1)
 Tagging.create(tag_id: 4, meal_id: 1)
 Tagging.create(tag_id: 5, recipe_id: 1)
-# Tagging.create(tag_id: 1, document_id: 1)
+Tagging.create(tag_id: 1, document_id: 1)
 # Tagging.create(tag_id: 1, medication_id: 1)
-# Tagging.create(tag_id: 1, playlist_id: 1)
+Tagging.create(tag_id: 1, playlist_id: 1)
+Tagging.create(tag_id: 2, playlist_id: 2)
+Tagging.create(tag_id: 3, playlist_id: 3)
 # Tagging.create(tag_id: 1, schedule_id: 1)
 # Tagging.create(tag_id: 1, treatment_id: 1)
 
@@ -73,3 +75,36 @@ Document.create(name: 'Profile', description: 'Profile of user', instructions: '
 Document.create(name: 'Diet Plan', description: 'Diet of user', instructions: 'Update this regularly', format: 'docx', location: 'file_path', user_id: 1)
 Document.create(name: 'Activity Plan', description: 'Activities of user', instructions: 'Update this regularly', format: 'docx', location: 'file_path', user_id: 1)
 Document.create(name: 'Treatment Plan', description: 'Treatments of user', instructions: 'Update this regularly', format: 'docx', location: 'file_path', user_id: 1)
+
+Playlist.create(name: 'Cooking videos', description: 'Youtube cookiing videos')
+Playlist.create(name: 'Disney Songs', description: 'Favorite Disney songs')
+Playlist.create(name: 'Exercise', description: 'Exercise videos')
+
+Resource.create(name: 'Cookie Cake', description: 'Youtube video Cookie Cake', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Space Donut', description: 'Youtube video Space Donut', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Ice Cream Cones', description: 'Youtube video Ice Cream Cones', format: 'video', location: 'path_to_video')
+
+Resource.create(name: 'Heigh Ho', description: 'Disney song, Heigh Ho', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Zippity Doo Dah', description: 'Disney song, Zippity', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Barney', description: 'Barney song', format: 'audio', location: 'path_to_audio')
+
+Resource.create(name: 'Billy Blanks', description: 'Taebo exercise video', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Denise Austin', description: 'Denise Austin exercise video', format: 'video', location: 'path_to_video')
+Resource.create(name: 'Stretch It!', description: 'Stretch It exercise video', format: 'video', location: 'path_to_video')
+
+PlaylistResource.create(playlist_id: 1, resource_id: 5)
+PlaylistResource.create(playlist_id: 1, resource_id: 6)
+PlaylistResource.create(playlist_id: 1, resource_id: 7)
+
+PlaylistResource.create(playlist_id: 2, resource_id: 8)
+PlaylistResource.create(playlist_id: 2, resource_id: 9)
+PlaylistResource.create(playlist_id: 2, resource_id: 10)
+
+PlaylistResource.create(playlist_id: 3, resource_id: 11)
+PlaylistResource.create(playlist_id: 3, resource_id: 12)
+PlaylistResource.create(playlist_id: 3, resource_id: 13)
+
+# Treatment.create(name: 'Meditation', description: 'Meditation calm the mind and foster inner peace')
+# Treatment.create(name: 'Yoga', description: 'Yoga to stretch the body and foster inner peace')
+# Treatment.create(name: 'Drug plan', description: 'Mood stablizers')
+

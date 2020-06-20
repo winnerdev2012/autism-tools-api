@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       resources :recipes
       resources :users
       resources :documents
+      resources :playlists
+      resources :playlist_resources
     end
   end  
 end
