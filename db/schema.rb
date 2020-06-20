@@ -105,7 +105,6 @@ ActiveRecord::Schema.define(version: 2020_06_20_004453) do
     t.integer "playlist_id"
     t.integer "schedule_id"
     t.integer "treatment_id"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
