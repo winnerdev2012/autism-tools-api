@@ -1,5 +1,5 @@
 class Tagging < ApplicationRecord
-  validate :has_one_model_id?
+  validate :has_one_model?
 
   belongs_to :tag
   belongs_to :board, optional: true
@@ -12,9 +12,9 @@ class Tagging < ApplicationRecord
   belongs_to :playlist, optional: true
   belongs_to :schedule, optional: true
   belongs_to :treatment, optional: true
-  belongs_to :user, optional: true
 
-  def has_one_model_id?
-    self.attributes.filter { |a| !a.nil? }.count == 3
+  def has_one_model?
+    board || resource || diet || meal || recipe || document || medication || playlist || schedule || treatment ? true : errors.add(:has_model?, 'tagging must have tagged model instance')
+    
   end
 end

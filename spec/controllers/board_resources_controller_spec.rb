@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe BoardResourcesController, type: :controller do
+RSpec.describe Api::V1::BoardResourcesController, type: :controller do
 
 end
