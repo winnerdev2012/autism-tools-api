@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_21_211008) do
+ActiveRecord::Schema.define(version: 2020_06_21_232440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_21_211008) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "start_time", default: "2020-06-21 23:04:38"
+    t.datetime "start_time", default: "2020-06-21 23:28:21"
     t.datetime "end_time"
     t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
@@ -158,6 +158,8 @@ ActiveRecord::Schema.define(version: 2020_06_21_211008) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "authentication_token", limit: 30
+    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
