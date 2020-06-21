@@ -108,6 +108,9 @@ PlaylistResource.create(playlist_id: 3, resource_id: 13)
 # Treatment.create(name: 'Yoga', description: 'Yoga to stretch the body and foster inner peace')
 # Treatment.create(name: 'Drug plan', description: 'Mood stablizers')
 
-Event.create(name: 'Morning Walk', description: 'Go for a walk in the morninig', start_time: Time.now, end_time: Time.now + 360)
-Event.create(name: 'Breakfast', description: 'Eggs, toast, juice', start_time: Time.now, end_time: Time.now + 720)
-Event.create(name: 'Study', description: 'Study on testing with rspec', start_time: Time.now)
+event1 = Event.create(name: 'Morning Walk', description: 'Go for a walk in the morning', end_time: Time.now + 360)
+event2 = Event.create(name: 'Breakfast', description: 'Eggs, toast, juice', end_time: Time.now + 720)
+event3 = Event.create(name: 'Study', description: 'Study on testing with rspec')
+event4 = Event.create(name: 'Beach Day', description: 'Go to the beach', start_time: Time.new(2020, 7, 4, 12, 30))
+
+event1.update(users: [User.first])
