@@ -1,5 +1,5 @@
-User.create(username: 'judboy', password: 'pointer', first_name: 'Judson', middle_name: 'Lee', last_name: 'Smith', email: 'jud@smithebtek.com')
-User.create(username: 'testuser', password: 'pointer', first_name: 'Test', last_name: 'User', email: 'test@smithebtek.com')
+User.create(username: 'judboy', password: 'pointer', first_name: 'Judson', middle_name: 'Lee', last_name: 'Smith', email: 'jud@smithwebtek.com')
+User.create(username: 'testuser', password: 'pointer', first_name: 'Test', last_name: 'User', email: 'test@smithwebtek.com')
 
 
 Board.create(name: 'Videos', description: 'Choose a video')

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
-  get 'sessions/destroy'
   devise_for :users
   namespace :api do
     namespace :v1 do
@@ -19,6 +17,8 @@ Rails.application.routes.draw do
       resources :playlist_resources
       resources :events
       resources :event_users
+      get 'sessions', to: 'sessions#create'
+      delete 'sessions', to: 'sessions#destroy'
     end
   end
   root 'api/v1/users#index'
