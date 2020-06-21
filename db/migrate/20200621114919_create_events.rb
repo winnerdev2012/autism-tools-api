@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
     create_table :events do |t|
       t.string :name
       t.text :description
-      t.datetime :start_time
+      t.datetime :start_time, default: Time.now
       t.datetime :end_time
       t.integer :duration
 
