@@ -108,3 +108,6 @@ PlaylistResource.create(playlist_id: 3, resource_id: 13)
 # Treatment.create(name: 'Yoga', description: 'Yoga to stretch the body and foster inner peace')
 # Treatment.create(name: 'Drug plan', description: 'Mood stablizers')
 
+Event.create(name: 'Morning Walk', description: 'Go for a walk in the morninig', start_time: Time.now, end_time: Time.now + 360)
+Event.create(name: 'Breakfast', description: 'Eggs, toast, juice', start_time: Time.now, end_time: Time.now + 720)
+Event.create(name: 'Study', description: 'Study on testing with rspec', start_time: Time.now)

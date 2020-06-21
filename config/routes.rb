@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :event_users
   namespace :api do
     namespace :v1 do
       resources :boards
@@ -14,6 +15,7 @@ Rails.application.routes.draw do
       resources :documents
       resources :playlists
       resources :playlist_resources
+      resources :events
     end
   end  
 end
