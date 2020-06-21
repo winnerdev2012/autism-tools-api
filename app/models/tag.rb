@@ -10,5 +10,4 @@ class Tag < ApplicationRecord
   has_many :playlists, through: :taggings
   has_many :schedules, through: :taggings
   has_many :treatments, through: :taggings
-  has_many :users, through: :taggings
 end
