@@ -8,8 +8,6 @@ RSpec.describe Event, type: :model do
 
   it 'raises error if no start_time provided' do
     event = Event.new(name: "New Event", start_time: nil)
-    binding.pry
-    
     event.save
     expect(event.errors.messages[:start_time]).to include("can't be blank")
   end
