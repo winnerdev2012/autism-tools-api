@@ -1,0 +1,2 @@
+class EventUsersController < ApplicationController
+end
