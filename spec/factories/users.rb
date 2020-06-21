@@ -3,8 +3,9 @@ FactoryBot.define do
     first_name { "MyText" }
     last_name { "MyText" }
     middle_name { "MyText" }
-    nick_name { "MyText" }
-    email { "MyText" }
+    username { "MyText" }
+    email { "testuser@smithwebtek.com" }
+    password {"pointer"}
     phone { "MyText" }
     address1 { "MyText" }
     address2 { "MyText" }

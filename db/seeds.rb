@@ -1,3 +1,7 @@
+User.create(username: 'judboy', password: 'pointer', first_name: 'Judson', middle_name: 'Lee', last_name: 'Smith', email: 'jud@smithwebtek.com')
+User.create(username: 'testuser', password: 'pointer', first_name: 'Test', last_name: 'User', email: 'test@smithwebtek.com')
+
+
 Board.create(name: 'Videos', description: 'Choose a video')
 Board.create(name: 'Foods', description: 'Choose a food')
 Board.create(name: 'Songs', description: 'Choose a song')
@@ -69,7 +73,6 @@ Recipe.create(name: 'Pea Soup', description: 'Pea Soup', instructions: 'Soup sto
 Recipe.create(name: 'Lentil Soup', description: 'Lentil Soup', instructions: 'Soup stock, veggies, lentils')
 Recipe.create(name: 'Fried Rice', description: 'Fried Rice', instructions: 'Rice, egg, chop veggies, oil, sesame, soy sauce')
 
-User.create(first_name: 'Judson', middle_name: 'Lee', last_name: 'Smith')
 
 Document.create(name: 'Profile', description: 'Profile of user', instructions: 'Update this regularly', format: 'docx', location: 'file_path', user_id: 1)
 Document.create(name: 'Diet Plan', description: 'Diet of user', instructions: 'Update this regularly', format: 'docx', location: 'file_path', user_id: 1)

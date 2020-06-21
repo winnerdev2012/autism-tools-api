@@ -9,7 +9,8 @@ gem 'puma', '~> 4.1'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.2'
-gem 'rails-scheduler'
+gem 'devise'
+gem 'simple_token_authentication', '~> 1.0' 
 
 group :development, :test do
   gem 'factory_bot_rails'
