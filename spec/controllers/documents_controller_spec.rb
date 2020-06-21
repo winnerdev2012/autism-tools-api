@@ -1,8 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::DocumentsController, type: :controller do
+  before do
+    @user = create :user
+  end
+  
   let(:valid_attributes) {
-    { :name => "Test name!", :description => "This is a test description", user_id: 1}
+    { user_id: @user.id, :name => "Test name!", :description => "This is a test description"}
   }
   # for Devise
   # let(:valid_session) { {} }

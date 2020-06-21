@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
   validates :start_time, presence: true
-  validate :start_time_valid?
-
+  before_save :start_time_valid?
   before_save :set_duration
+
   has_many :event_users
   has_many :users, through: :event_users
 
@@ -10,6 +10,7 @@ class Event < ApplicationRecord
 
   def set_duration
     if self.end_time
+      # self.duration = (end_time - start_time).to_i
       self.duration = (end_time - start_time).to_i
     else
       self.duration = DEFAULT_DURATION
