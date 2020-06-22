@@ -14,7 +14,12 @@ class Api::V1::SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
         
     if user&.valid_password?(params[:password])
-      render json: {message: "User #{params[:email]} session deleted"}
+      render json: {
+        message: "User #{params[:email]} signed out.",
+        user_id: user.id,
+        authentication_token: user.authentication_token
+      }
+
     else
       head(:unauthorized)
     end

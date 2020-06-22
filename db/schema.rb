@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_21_232440) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "start_time", default: "2020-06-21 23:28:21"
+    t.datetime "start_time", default: "2020-06-21 23:47:50"
     t.datetime "end_time"
     t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
