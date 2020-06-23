@@ -2,7 +2,8 @@
 lock "~> 3.14.1"
 
 set :application, "autism-tools-api"
-set :repo_url, "git@example.com:smithwebtek/autism-tools-api.git"
+set :branch, :master
+set :repo_url, "git@github.com:smithwebtek/autism-tools-api.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -37,3 +38,14 @@ set :keep_releases, 5
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 set :ssh_options, verify_host_key: :secure
+
+namespace :deploy do
+  task :install_dependencies do
+    on roles(:web), in: :sequence, wait: 5 do
+      within release_path do
+        execute :bundle, "--without development test"
+      end
+    end
+  end
+  after :published, :install_dependencies
+end
