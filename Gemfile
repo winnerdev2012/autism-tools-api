@@ -19,7 +19,7 @@ group :development, :test do
       gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master' # Previously '4-0-dev' or '4-0-maintenance' branch
   end
 
-  # gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rails', '~> 1.4'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-rvm'
   # gem 'capistrano-websocket-rails'
