@@ -18,6 +18,14 @@ group :development, :test do
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
       gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master' # Previously '4-0-dev' or '4-0-maintenance' branch
   end
+
+  # gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rvm'
+  # gem 'capistrano-websocket-rails'
+  # gem "ed25519", ">= 1.2"
+  # gem "bcrypt_pbkdf", ">= 1.0"
+  gem "capistrano", "~> 3.14", require: false
 end
 
 group :development do
