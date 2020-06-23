@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.14.1"
+lock "~> 3.7.2"
 
 set :application, "autism-tools-api"
 set :branch, :master
