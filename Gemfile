@@ -20,7 +20,7 @@ group :development, :test do
   end
 
   gem 'capistrano-passenger'
-  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano', '~> 3.7.2'
   gem 'capistrano-rvm'
 end
 
