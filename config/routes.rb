@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       resources :playlist_resources
       resources :events
       resources :event_users
+      resources :treatments
+      resources :steps
       get 'sessions', to: 'sessions#create'
       delete 'sessions', to: 'sessions#destroy'
     end
