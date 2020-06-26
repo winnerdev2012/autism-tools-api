@@ -107,13 +107,25 @@ PlaylistResource.create(playlist_id: 3, resource_id: 11)
 PlaylistResource.create(playlist_id: 3, resource_id: 12)
 PlaylistResource.create(playlist_id: 3, resource_id: 13)
 
-# Treatment.create(name: 'Meditation', description: 'Meditation calm the mind and foster inner peace')
-# Treatment.create(name: 'Yoga', description: 'Yoga to stretch the body and foster inner peace')
-# Treatment.create(name: 'Drug plan', description: 'Mood stablizers')
-
 event1 = Event.create(name: 'Morning Walk', description: 'Go for a walk in the morning', end_time: Time.now + 360)
 event2 = Event.create(name: 'Breakfast', description: 'Eggs, toast, juice', end_time: Time.now + 720)
 event3 = Event.create(name: 'Study', description: 'Study on testing with rspec')
 event4 = Event.create(name: 'Beach Day', description: 'Go to the beach', start_time: Time.new(2020, 7, 4, 12, 30))
 
 event1.update(users: [User.first])
+
+Treatment.create(name: 'Meditation', description: 'Meditation calm the mind and foster inner peace')
+Treatment.create(name: 'Yoga', description: 'Yoga to stretch the body and foster inner peace')
+Treatment.create(name: 'Meds plan', description: 'Mood stablizers')
+
+Step.create(treatment_id: 1, step_number: 1,name: 'Step 1', description: 'Meditation Step 1')
+Step.create(treatment_id: 1, step_number: 2,name: 'Step 2', description: 'Meditation Step 2')
+Step.create(treatment_id: 1, step_number: 3,name: 'Step 3', description: 'Meditation Step 3')
+
+Step.create(treatment_id: 2, step_number: 1,name: 'Step 1', description: 'Yoga Step 1')
+Step.create(treatment_id: 2, step_number: 2,name: 'Step 2', description: 'Yoga Step 2')
+Step.create(treatment_id: 2, step_number: 3,name: 'Step 3', description: 'Yoga Step 3')
+
+Step.create(treatment_id: 3, step_number: 1,name: 'Step 1', description: 'Meds plan Step 1')
+Step.create(treatment_id: 3, step_number: 2,name: 'Step 2', description: 'Meds plan Step 2')
+Step.create(treatment_id: 3, step_number: 3,name: 'Step 3', description: 'Meds plan Step 3')

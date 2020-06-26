@@ -6,8 +6,10 @@ class Tag < ApplicationRecord
   has_many :meals, through: :taggings
   has_many :recipes, through: :taggings
   has_many :documents, through: :taggings
-  has_many :medications, through: :taggings
   has_many :playlists, through: :taggings
-  has_many :schedules, through: :taggings
   has_many :treatments, through: :taggings
+  has_many :steps, through: :taggings
+  # has_many :medications, through: :taggings
+  # has_many :supplements, through: :taggings
+  # has_many :schedules, through: :taggings
 end
