@@ -32,7 +32,7 @@ class Api::V1::TaggingsController < ApplicationController
   
   private
   def tagging_params
-    params.require(:board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :playlist_id, :treatment_id, :step_id, :medication_id, :supplement_id)
+    params.require(:tagging).permit(:tag_id, :board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :treatment_id, :step_id, :medication_id, :supplement_id, :playlist_id, :event_id)
   end
   
   def set_tagging
