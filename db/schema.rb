@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_012629) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "start_time", default: "2020-06-27 01:49:55"
+    t.datetime "start_time", default: "2020-06-27 15:54:22"
     t.datetime "end_time"
     t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
@@ -149,12 +149,12 @@ ActiveRecord::Schema.define(version: 2020_06_27_012629) do
     t.integer "meal_id"
     t.integer "recipe_id"
     t.integer "document_id"
-    t.integer "playlist_id"
-    t.integer "schedule_id"
     t.integer "treatment_id"
     t.integer "step_id"
     t.integer "medication_id"
     t.integer "supplement_id"
+    t.integer "playlist_id"
+    t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
