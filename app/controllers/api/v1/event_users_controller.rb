@@ -32,7 +32,7 @@ class Api::V1::EventUsersController < ApplicationController
   
   private
   def event_user_params
-    params.require(:event_user).permit(:name)
+    params.require(:event_user).permit(:event_id, :user_id)
   end
   
   def set_event_user

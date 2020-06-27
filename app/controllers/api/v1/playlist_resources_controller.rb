@@ -32,7 +32,7 @@ class Api::V1::PlaylistResourcesController < ApplicationController
   
   private
   def playlist_resource_params
-    params.require(:playlist_resource).permit(:name)
+    params.require(:playlist_resource).permit(:playlist_id, :resource_id)
   end
   
   def set_playlist_resource

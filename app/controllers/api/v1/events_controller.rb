@@ -32,7 +32,7 @@ class Api::V1::EventsController < ApplicationController
   
   private
   def event_params
-    params.require(:event).permit(:name)
+    params.require(:event).permit(:name, :description, :start_time, :end_time, :duration)
   end
   
   def set_event

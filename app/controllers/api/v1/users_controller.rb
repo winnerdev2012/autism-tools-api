@@ -32,7 +32,7 @@ class Api::V1::UsersController < ApplicationController
   
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :middle_name, :username, :password, :email, :phone, :address1, :address2, :address3, :address_city, :address_state, :address_zip, :age, :weight, :height, :eyes_color, :hair_color, :description, :diagnosis)
+    params.require(:user).permit(:first_name, :last_name, :middle_name, :username, :password, :email, :phone, :address1, :address2, :address3, :address_city, :address_state, :address_zip, :age, :weight, :height, :eye_color, :hair_color, :description, :diagnosis)
   end
   
   def set_user

@@ -32,7 +32,7 @@ class Api::V1::TreatmentsController < ApplicationController
   
   private
   def treatment_params
-    params.require(:treatment).permit(:name, :description)
+    params.require(:treatment).permit(:name, :description, :instructions)
   end
   
   def set_treatment
