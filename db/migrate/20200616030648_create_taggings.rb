@@ -8,11 +8,12 @@ class CreateTaggings < ActiveRecord::Migration[6.0]
       t.integer :meal_id, default: nil
       t.integer :recipe_id, default: nil
       t.integer :document_id, default: nil
-      t.integer :medication_id, default: nil
       t.integer :playlist_id, default: nil
       t.integer :schedule_id, default: nil
       t.integer :treatment_id, default: nil
       t.integer :step_id, default: nil
+      t.integer :medication_id, default: nil
+      t.integer :supplement_id, default: nil
 
       t.timestamps
     end
