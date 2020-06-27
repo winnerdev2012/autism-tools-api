@@ -1,5 +1,5 @@
 class Tagging < ApplicationRecord
-  validate :has_one_model?
+  validate :has_at_least_one_model?
   belongs_to :tag
   belongs_to :board, optional: true
   belongs_to :resource, optional: true
@@ -14,8 +14,11 @@ class Tagging < ApplicationRecord
   belongs_to :playlist, optional: true
   belongs_to :event, optional: true
 
-  def has_one_model?
+  def has_at_least_one_model?
     board || resource || diet || meal || recipe || document || treatment || step || medication || supplement || playlist || event ? true : errors.add(:has_model?, 'tagging must have tagged model instance')
-    
   end
+
+  # TODO: need a validation that a tagging only has one (1) other model in addition to its Tag
+  # def has_only_one_model?
+  # end
 end
