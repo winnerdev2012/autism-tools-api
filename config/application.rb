@@ -21,6 +21,9 @@ Bundler.require(*Rails.groups)
 
 module AutismTools
   class Application < Rails::Application
+    # Activate observers that should always be running.
+    config.active_record.observers = :user_observer, :treatment_observer
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
     config.time_zone = 'Eastern Time (US & Canada)'

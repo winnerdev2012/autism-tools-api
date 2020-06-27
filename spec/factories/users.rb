@@ -16,7 +16,7 @@ FactoryBot.define do
     age { "MyText" }
     weight { "MyText" }
     height { "MyText" }
-    eyes_color { "MyText" }
+    eye_color { "MyText" }
     hair_color { "MyText" }
     description { "MyText" }
     diagnosis { "MyText" }

@@ -16,7 +16,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.text :age
       t.text :weight
       t.text :height
-      t.text :eyes_color
+      t.text :eye_color
       t.text :hair_color
       t.text :description
       t.text :diagnosis

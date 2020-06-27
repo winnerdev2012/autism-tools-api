@@ -11,6 +11,7 @@ gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.2'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0' 
+gem 'rails-observers'
 
 group :development, :test do
   gem 'factory_bot_rails'

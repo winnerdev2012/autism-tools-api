@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_27_012629) do
+ActiveRecord::Schema.define(version: 2020_06_27_173033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,25 @@ ActiveRecord::Schema.define(version: 2020_06_27_012629) do
     t.datetime "start_time"
     t.datetime "end_time"
     t.integer "duration"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "tag_id"
+    t.integer "board_id"
+    t.integer "resource_id"
+    t.integer "diet_id"
+    t.integer "meal_id"
+    t.integer "recipe_id"
+    t.integer "document_id"
+    t.integer "treatment_id"
+    t.integer "step_id"
+    t.integer "medication_id"
+    t.integer "supplement_id"
+    t.integer "playlist_id"
+    t.integer "event_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -188,7 +207,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_012629) do
     t.text "age"
     t.text "weight"
     t.text "height"
-    t.text "eyes_color"
+    t.text "eye_color"
     t.text "hair_color"
     t.text "description"
     t.text "diagnosis"

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
       resources :steps
       resources :medications
       resources :supplements
+      resources :histories
       get 'sessions', to: 'sessions#create'
       delete 'sessions', to: 'sessions#destroy'
     end
