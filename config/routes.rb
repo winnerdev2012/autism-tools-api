@@ -19,6 +19,8 @@ Rails.application.routes.draw do
       resources :event_users
       resources :treatments
       resources :steps
+      resources :medications
+      resources :supplements
       get 'sessions', to: 'sessions#create'
       delete 'sessions', to: 'sessions#destroy'
     end

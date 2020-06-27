@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_26_031507) do
+ActiveRecord::Schema.define(version: 2020_06_27_012629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2020_06_26_031507) do
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.datetime "start_time", default: "2020-06-26 03:46:36"
+    t.datetime "start_time", default: "2020-06-27 01:49:55"
     t.datetime "end_time"
     t.integer "duration"
     t.datetime "created_at", precision: 6, null: false
@@ -73,6 +73,13 @@ ActiveRecord::Schema.define(version: 2020_06_26_031507) do
   end
 
   create_table "meals", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "medications", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
@@ -127,6 +134,13 @@ ActiveRecord::Schema.define(version: 2020_06_26_031507) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "supplements", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "taggings", force: :cascade do |t|
     t.integer "tag_id"
     t.integer "board_id"
@@ -135,11 +149,12 @@ ActiveRecord::Schema.define(version: 2020_06_26_031507) do
     t.integer "meal_id"
     t.integer "recipe_id"
     t.integer "document_id"
-    t.integer "medication_id"
     t.integer "playlist_id"
     t.integer "schedule_id"
     t.integer "treatment_id"
     t.integer "step_id"
+    t.integer "medication_id"
+    t.integer "supplement_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

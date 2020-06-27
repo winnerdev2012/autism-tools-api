@@ -1,5 +1,5 @@
 class TaggingSerializer < ActiveModel::Serializer
-  attributes :id, :board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :playlist_id, :treatment_id, :step_id
+  attributes :id, :board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :playlist_id, :treatment_id, :step_id, :medication_id, :supplement_id
   belongs_to :tag
   belongs_to :board, optional: true
   belongs_to :resource, optional: true
@@ -10,7 +10,7 @@ class TaggingSerializer < ActiveModel::Serializer
   belongs_to :playlist, optional: true
   belongs_to :treatment, optional: true
   belongs_to :step, optional: true
-  # belongs_to :medication, optional: true
-  # belongs_to :supplement, optional: true
+  belongs_to :medication, optional: true
+  belongs_to :supplement, optional: true
   # belongs_to :schedule, optional: true
 end

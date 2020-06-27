@@ -11,8 +11,8 @@ class Tagging < ApplicationRecord
   belongs_to :playlist, optional: true
   belongs_to :treatment, optional: true
   belongs_to :step, optional: true
-  # belongs_to :medication, optional: true
-  # belongs_to :supplements, optional: true
+  belongs_to :medication, optional: true
+  belongs_to :supplement, optional: true
   # belongs_to :schedule, optional: true
 
   def has_one_model?
