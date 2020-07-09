@@ -11,7 +11,8 @@ class Api::V1::BoardsController < ApplicationController
   end
 
   def create
-    if @board.create(board_params)
+    @board = Board.new(board_params)
+    if @board.save
       render json: @board
     else
       render json: {message: "Board not created."}
