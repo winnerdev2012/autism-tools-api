@@ -28,7 +28,11 @@ class Api::V1::BoardsController < ApplicationController
   end
   
   def destroy
-    render json: @board
+    if @board.delete
+      render json: { message: "Board #{@board.id} deleted."}
+    else
+      render json: { message: "Board NOT deleted."}
+    end
   end
   
   private
