@@ -11,7 +11,8 @@ class Api::V1::BoardResourcesController < ApplicationController
   end
 
   def create
-    if @board_resource.create(board_resource_params)
+    @board_resource = BoardResource.new(board_resource_params)
+    if @board_resource.save
       render json: @board_resource
     else
       render json: {message: "BoardResource not created."}
@@ -27,7 +28,12 @@ class Api::V1::BoardResourcesController < ApplicationController
   end
 
   def destroy
-    render json: @board_resource
+    if @board_resource.delete
+      binding.pry
+      render json: { message: "BoardResource #{@board_resource.id} deleted."}
+    else
+      render json: { message: "BoardResource NOT deleted."}
+    end
   end
 
   private
