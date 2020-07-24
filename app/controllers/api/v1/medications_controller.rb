@@ -28,7 +28,11 @@ class Api::V1::MedicationsController < ApplicationController
   end
   
   def destroy
-    render json: @medication
+    if @medication.delete
+      render json: { message: "Medication #{@medication.id} deleted."}
+    else
+      render json: { message: "Medication NOT deleted."}
+    end
   end
   
   private

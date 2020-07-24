@@ -28,7 +28,11 @@ class Api::V1::StepsController < ApplicationController
   end
   
   def destroy
-    render json: @step
+    if @step.delete
+      render json: { message: "Step #{@step.id} deleted."}
+    else
+      render json: { message: "Step NOT deleted."}
+    end
   end
   
   private

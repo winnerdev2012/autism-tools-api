@@ -28,7 +28,11 @@ class Api::V1::EventsController < ApplicationController
   end
   
   def destroy
-    render json: @event
+    if @event.delete
+      render json: { message: "Event #{@event.id} deleted."}
+    else
+      render json: { message: "Event NOT deleted."}
+    end
   end
   
   private

@@ -28,7 +28,11 @@ class Api::V1::EventUsersController < ApplicationController
   end
   
   def destroy
-    render json: @event_user
+    if @event_user.delete
+      render json: { message: "EventUser #{@event_user.id} deleted."}
+    else
+      render json: { message: "EventUser NOT deleted."}
+    end
   end
   
   private
