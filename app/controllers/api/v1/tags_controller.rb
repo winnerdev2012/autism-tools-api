@@ -28,7 +28,11 @@ class Api::V1::TagsController < ApplicationController
   end
   
   def destroy
-    render json: @tag
+    if @tag.delete
+      render json: { message: "Tag #{@tag.id} deleted."}
+    else
+      render json: { message: "Tag NOT deleted."}
+    end
   end
   
   private

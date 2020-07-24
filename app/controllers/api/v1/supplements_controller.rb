@@ -28,7 +28,11 @@ class Api::V1::SupplementsController < ApplicationController
   end
   
   def destroy
-    render json: @supplement
+    if @supplement.delete
+      render json: { message: "Supplement #{@supplement.id} deleted."}
+    else
+      render json: { message: "Supplement NOT deleted."}
+    end
   end
   
   private

@@ -28,7 +28,11 @@ class Api::V1::PlaylistResourcesController < ApplicationController
   end
   
   def destroy
-    render json: @playlist_resource
+    if @playlist_resource.delete
+      render json: { message: "PlaylistResource #{@playlist_resource.id} deleted."}
+    else
+      render json: { message: "PlaylistResource NOT deleted."}
+    end
   end
   
   private
