@@ -11,7 +11,8 @@ class Api::V1::StepsController < ApplicationController
   end
 
   def create
-    if @step.create(step_params)
+    @step = Step.new(step_params)
+    if @step.save
       render json: @step
     else
       render json: {message: "Step not created."}

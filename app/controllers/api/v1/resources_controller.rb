@@ -11,7 +11,8 @@ class Api::V1::ResourcesController < ApplicationController
   end
 
   def create
-    if @resource.create(resource_params)
+    @resource = Resource.new(resource_params)
+    if @resource.save
       render json: @resource
     else
       render json: {message: "Resource not created."}

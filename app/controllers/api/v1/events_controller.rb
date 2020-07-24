@@ -11,7 +11,8 @@ class Api::V1::EventsController < ApplicationController
   end
 
   def create
-    if @event.create(event_params)
+    @event = Event.new(event_params)
+    if @event.save
       render json: @event
     else
       render json: {message: "Event not created."}

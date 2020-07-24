@@ -11,7 +11,8 @@ class Api::V1::DocumentsController < ApplicationController
   end
 
   def create
-    if @document.create(document_params)
+    @document = Document.new(document_params)
+    if @document.save
       render json: @document
     else
       render json: {message: "Document not created."}

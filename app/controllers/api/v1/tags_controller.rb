@@ -11,7 +11,8 @@ class Api::V1::TagsController < ApplicationController
   end
 
   def create
-    if @tag.create(tag_params)
+    @tag = Tag.new(tag_params)
+    if @tag.save
       render json: @tag
     else
       render json: {message: "Tag not created."}

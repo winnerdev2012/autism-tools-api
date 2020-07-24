@@ -11,7 +11,8 @@ class Api::V1::MedicationsController < ApplicationController
   end
 
   def create
-    if @medication.create(medication_params)
+    @medication = Medication.new(medication_params)
+    if @medication.save
       render json: @medication
     else
       render json: {message: "Medication not created."}

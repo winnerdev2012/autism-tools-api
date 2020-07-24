@@ -11,7 +11,8 @@ class Api::V1::SupplementsController < ApplicationController
   end
 
   def create
-    if @supplement.create(supplement_params)
+    @supplement = Supplement.new(supplement_params)
+    if @supplement.save
       render json: @supplement
     else
       render json: {message: "Supplement not created."}

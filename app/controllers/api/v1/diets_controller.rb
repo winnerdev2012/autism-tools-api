@@ -16,6 +16,13 @@ class Api::V1::DietsController < ApplicationController
     else
       render json: {message: "Diet not created."}
     end
+
+    @diet = Diet.new(diet_params)
+    if @diet.save
+      render json: @diet
+    else
+      render json: {message: "Diet not created."}
+    end
   end
 
   def update

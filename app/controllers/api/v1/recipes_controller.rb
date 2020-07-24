@@ -11,7 +11,8 @@ class Api::V1::RecipesController < ApplicationController
   end
 
   def create
-    if @recipe.create(recipe_params)
+    @recipe = Recipe.new(recipe_params)
+    if @recipe.save
       render json: @recipe
     else
       render json: {message: "Recipe not created."}

@@ -11,7 +11,8 @@ class Api::V1::TaggingsController < ApplicationController
   end
 
   def create
-    if @tagging.create(tagging_params)
+    @tagging = Tagging.new(tagging_params)
+    if @tagging.save
       render json: @tagging
     else
       render json: {message: "Tagging not created."}
@@ -32,7 +33,7 @@ class Api::V1::TaggingsController < ApplicationController
   
   private
   def tagging_params
-    params.require(:tagging).permit(:tag_id, :board_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :treatment_id, :step_id, :medication_id, :supplement_id, :playlist_id, :event_id)
+    params.require(:tagging).permit(:tag_id, :tagging_id, :resource_id, :diet_id, :meal_id, :recipe_id, :document_id, :treatment_id, :step_id, :medication_id, :supplement_id, :playlist_id, :event_id)
   end
   
   def set_tagging
