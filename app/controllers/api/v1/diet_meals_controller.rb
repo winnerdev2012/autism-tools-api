@@ -11,7 +11,8 @@ class Api::V1::DietMealsController < ApplicationController
   end
 
   def create
-    if @diet_meal.create(diet_meal_params)
+    @diet_meal = DietMeal.new(diet_meal_params)
+    if @diet_meal.save
       render json: @diet_meal
     else
       render json: {message: "DietMeal not created."}

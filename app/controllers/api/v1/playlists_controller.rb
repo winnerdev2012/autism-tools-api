@@ -11,7 +11,8 @@ class Api::V1::PlaylistsController < ApplicationController
   end
 
   def create
-    if @playlist.create(playlist_params)
+    @playlist = Playlist.new(playlist_params)
+    if @playlist.save
       render json: @playlist
     else
       render json: {message: "Playlist not created."}

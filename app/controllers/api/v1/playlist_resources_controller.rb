@@ -11,7 +11,8 @@ class Api::V1::PlaylistResourcesController < ApplicationController
   end
 
   def create
-    if @playlist_resource.create(playlist_resource_params)
+    @playlist_resource = PlaylistResource.new(playlist_resource_params)
+    if @playlist_resource.save
       render json: @playlist_resource
     else
       render json: {message: "PlaylistResource not created."}

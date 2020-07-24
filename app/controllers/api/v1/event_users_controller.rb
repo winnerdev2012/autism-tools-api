@@ -11,7 +11,8 @@ class Api::V1::EventUsersController < ApplicationController
   end
 
   def create
-    if @event_user.create(event_user_params)
+    @event_user = EventUser.new(event_user_params)
+    if @event_user.save
       render json: @event_user
     else
       render json: {message: "EventUser not created."}

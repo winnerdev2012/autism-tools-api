@@ -11,7 +11,8 @@ class Api::V1::MealsController < ApplicationController
   end
 
   def create
-    if @meal.create(meal_params)
+    @meal = Meal.new(meal_params)
+    if @meal.save
       render json: @meal
     else
       render json: {message: "Meal not created."}

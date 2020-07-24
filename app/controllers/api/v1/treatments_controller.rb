@@ -11,7 +11,8 @@ class Api::V1::TreatmentsController < ApplicationController
   end
 
   def create
-    if @treatment.create(treatment_params)
+    @treatment = Treatment.new(treatment_params)
+    if @treatment.save
       render json: @treatment
     else
       render json: {message: "Treatment not created."}
