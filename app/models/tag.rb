@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :boards, through: :taggings
   has_many :resources, through: :taggings
   has_many :diets, through: :taggings

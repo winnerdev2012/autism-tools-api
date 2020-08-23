@@ -28,10 +28,10 @@ class Api::V1::BoardsController < ApplicationController
   end
   
   def destroy
-    if @board.delete
-      render json: { message: "Board #{@board.id} deleted."}
+    if @board.destroy
+      render json: { message: "Board #{@board.id} destroyed."}
     else
-      render json: { message: "Board NOT deleted."}
+      render json: { message: "Board NOT destroyed."}
     end
   end
   

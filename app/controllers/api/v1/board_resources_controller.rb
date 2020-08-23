@@ -28,11 +28,11 @@ class Api::V1::BoardResourcesController < ApplicationController
   end
 
   def destroy
-    if @board_resource.delete
+    if @board_resource.destroy
       binding.pry
-      render json: { message: "BoardResource #{@board_resource.id} deleted."}
+      render json: { message: "BoardResource #{@board_resource.id} destroyed."}
     else
-      render json: { message: "BoardResource NOT deleted."}
+      render json: { message: "BoardResource NOT destroyed."}
     end
   end
 

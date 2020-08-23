@@ -34,10 +34,10 @@ class Api::V1::DietsController < ApplicationController
   end
 
   def destroy
-    if @diet.delete
-      render json: { message: "Diet #{@diet.id} deleted."}
+    if @diet.destroy
+      render json: { message: "Diet #{@diet.id} destroyed."}
     else
-      render json: { message: "Diet NOT deleted."}
+      render json: { message: "Diet NOT destroyed."}
     end
   end
 

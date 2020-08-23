@@ -28,10 +28,10 @@ class Api::V1::HistoriesController < ApplicationController
   end
   
   def destroy
-    if @history.delete
-      render json: { message: "History #{@history.id} deleted."}
+    if @history.destroy
+      render json: { message: "History #{@history.id} destroyed."}
     else
-      render json: { message: "History NOT deleted."}
+      render json: { message: "History NOT destroyed."}
     end
   end
   

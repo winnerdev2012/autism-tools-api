@@ -28,10 +28,10 @@ class Api::V1::UsersController < ApplicationController
   end
   
   def destroy
-    if @user.delete
-      render json: { message: "User #{@user.id} deleted."}
+    if @user.destroy
+      render json: { message: "User #{@user.id} destroyed."}
     else
-      render json: { message: "User NOT deleted."}
+      render json: { message: "User NOT destroyed."}
     end
   end
   
