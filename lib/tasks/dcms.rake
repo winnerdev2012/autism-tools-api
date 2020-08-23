@@ -12,8 +12,5 @@ namespace :db do
     
     puts 'seeding db ....'
     Rake::Task['db:seed'].invoke
-    
-    puts 'running test suite && starting rails'
-    exec('bundle exec rspec && rails s')    
   end
 end
