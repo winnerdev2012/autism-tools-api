@@ -28,10 +28,10 @@ class Api::V1::MedicationsController < ApplicationController
   end
   
   def destroy
-    if @medication.delete
-      render json: { message: "Medication #{@medication.id} deleted."}
+    if @medication.destroy
+      render json: { message: "Medication #{@medication.id} destroyed."}
     else
-      render json: { message: "Medication NOT deleted."}
+      render json: { message: "Medication NOT destroyed."}
     end
   end
   

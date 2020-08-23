@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   before_save :start_time_valid?
   before_save :set_duration
 
-  has_many :event_users
+  has_many :event_users, dependent: :destroy
   has_many :users, through: :event_users
 
   DEFAULT_DURATION = 300 # 300 seconds = 5 minutes

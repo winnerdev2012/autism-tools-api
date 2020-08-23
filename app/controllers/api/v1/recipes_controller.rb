@@ -28,10 +28,10 @@ class Api::V1::RecipesController < ApplicationController
   end
   
   def destroy
-    if @recipe.delete
-      render json: { message: "Recipe #{@recipe.id} deleted."}
+    if @recipe.destroy
+      render json: { message: "Recipe #{@recipe.id} destroyed."}
     else
-      render json: { message: "Recipe NOT deleted."}
+      render json: { message: "Recipe NOT destroyed."}
     end
   end
   

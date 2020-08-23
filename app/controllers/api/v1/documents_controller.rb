@@ -28,10 +28,10 @@ class Api::V1::DocumentsController < ApplicationController
   end
   
   def destroy
-    if @document.delete
-      render json: { message: "Document #{@document.id} deleted."}
+    if @document.destroy
+      render json: { message: "Document #{@document.id} destroyed."}
     else
-      render json: { message: "Document NOT deleted."}
+      render json: { message: "Document NOT destroyed."}
     end
   end
   

@@ -28,10 +28,10 @@ class Api::V1::DietMealsController < ApplicationController
   end
   
   def destroy
-    if @diet_meal.delete
-      render json: { message: "DietMeal #{@diet_meal.id} deleted."}
+    if @diet_meal.destroy
+      render json: { message: "DietMeal #{@diet_meal.id} destroyed."}
     else
-      render json: { message: "DietMeal NOT deleted."}
+      render json: { message: "DietMeal NOT destroyed."}
     end
   end
   

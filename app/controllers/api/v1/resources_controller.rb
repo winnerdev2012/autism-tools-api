@@ -28,10 +28,10 @@ class Api::V1::ResourcesController < ApplicationController
   end
 
   def destroy
-    if @resource.delete
-      render json: { message: "Resource #{@resource.id} deleted."}
+    if @resource.destroy
+      render json: { message: "Resource #{@resource.id} destroyed."}
     else
-      render json: { message: "Resource NOT deleted."}
+      render json: { message: "Resource NOT destroyed."}
     end
   end
 
