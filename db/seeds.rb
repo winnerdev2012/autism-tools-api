@@ -13,6 +13,8 @@ end
 
 def create_resources_for_boards
   Resource.create(name: 'Thomas', description: 'a thomas video', format: 'video', location: 'local drive path')
+  Resource.create(name: 'Taebo', description: 'Billy Blanks exercise video', format: 'video', location: 'local drive path')
+  Resource.create(name: 'Heigh Ho', description: 'Disney songs video', format: 'video', location: 'local drive path')
   Resource.create(name: 'Pears', description: 'canned pears', format: 'food', location: 'kitchen cabinet')
   Resource.create(name: 'Heigh Ho', description: 'Disney songs CD', format: 'audio', location: 'CD player')
   Resource.create(name: 'Watch planes', description: 'go to airport and watch planes', format: 'activity', location: 'local airport')
@@ -20,9 +22,11 @@ end
 
 def create_board_resources
   BoardResource.create(board_id: 1, resource_id: 1)
-  BoardResource.create(board_id: 2, resource_id: 2)
-  BoardResource.create(board_id: 3, resource_id: 3)
-  BoardResource.create(board_id: 4, resource_id: 4)
+  BoardResource.create(board_id: 1, resource_id: 2)
+  BoardResource.create(board_id: 1, resource_id: 3)
+  BoardResource.create(board_id: 2, resource_id: 4)
+  BoardResource.create(board_id: 3, resource_id: 5)
+  BoardResource.create(board_id: 4, resource_id: 6)
 end
 
 def create_tags
