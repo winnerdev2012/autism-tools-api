@@ -12,11 +12,11 @@ def create_boards
 end
 
 def create_resources_for_boards
-  Resource.create(name: 'Thomas', description: 'a thomas video', format: 'video', location: 'local drive path')
+  Resource.create(name: 'Thomas', description: 'a thomas video', format: 'video', location: 'https://www.youtube.com/watch?v=fDHfAZPtxEk')
   Resource.create(name: 'Taebo', description: 'Billy Blanks exercise video', format: 'video', location: 'https://www.youtube.com/watch?v=iAZFwODochg')
-  Resource.create(name: 'Heigh Ho', description: 'Disney songs video', format: 'video', location: 'local drive path')
+  Resource.create(name: 'Heigh Ho pt1', description: 'Disney songs video', format: 'video', location: 'https://www.youtube.com/watch?v=dxOn6e-jYHg')
   Resource.create(name: 'Pears', description: 'canned pears', format: 'food', location: 'kitchen cabinet')
-  Resource.create(name: 'Heigh Ho', description: 'Disney songs CD', format: 'audio', location: 'CD player')
+  Resource.create(name: 'Heigh Ho pt2', description: 'Disney songs CD', format: 'video', location: 'https://www.youtube.com/watch?v=M4hIxRKkiXw')
   Resource.create(name: 'Watch planes', description: 'go to airport and watch planes', format: 'activity', location: 'local airport')
 end
 
